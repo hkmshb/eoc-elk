@@ -1,0 +1,68 @@
+version: '3.0'
+
+services:
+  elasticsearch:
+    build:
+      context: elasticsearch/
+      args:
+        ELK_VERSION: 6.2.3
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    environment:
+      ES_JAVA_OPTS: "-Xmx256m -Xms256m"
+    networks:
+      local:
+        aliases:
+          - elasticsearch
+
+  kibana:
+    build:
+      context: kibana/
+      args:
+        ELK_VERSION: 6.2.3
+    volumes:
+      - ./kibana/config/:/usr/share/kibana/config:ro
+    ports:
+      - "5601:5601"
+    links:
+      - elasticsearch:elasticsearch
+    networks:
+      local:
+        aliases:
+        - kibana
+    depends_on:
+      - elasticsearch
+
+  logstash:
+    build:
+      context: logstash/
+    volumes:
+      - ./logstash/config/logstash.yml:/usr/share/logstash/config/logstash.yml:ro
+      - ./logstash/dictionary:/usr/share/logstash/dictionary:ro
+      - ./logstash/pipeline:/usr/share/logstash/pipeline:ro
+      - ./logstash/mapping:/usr/share/logstash/mapping:ro
+      - ./logstash/sql:/usr/share/logstash/sql:ro
+      - ./logstash/_logs:/usr/share/logstash/logs:ro
+      - ./logstash-data:/usr/share/logstash/files
+    ports:
+      - "5001:5000"
+    environment:
+      LS_JAVA_OPTS: "-Xmx256m -Xms256m"
+      JDBC_STRING: jdbc:postgresql://host.docker.internal/eha
+      POSTGRES_USER: 'hkmshb'
+      POSTGRES_PASSWORD: '0p3n'
+      CKAN_DB_HOST: host.docker.internal
+    command: start-prod
+    networks:
+      local:
+        aliases:
+          - logstash
+    depends_on:
+      - elasticsearch
+
+volumes:
+  logstash-data:
+
+networks:
+  local:

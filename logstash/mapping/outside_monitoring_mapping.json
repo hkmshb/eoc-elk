@@ -1,0 +1,197 @@
+{"template": "outside_monitoring_data",
+  "order": 1,
+  "settings": {
+    "number_of_shards": 5
+  },
+  "mappings": {
+    "doc": {
+      "properties": {
+        "@timestamp": {
+          "type": "date"
+        },
+        "@version": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "OUTRnd": {
+          "type": "date"
+        },
+        "State":{
+              "type":"text",
+              "fields": {
+                  "keyword":{
+                      "type":"keyword",
+                      "ignore_above":256
+                  }}
+              },
+        "LGA": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "Ward": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "Settlementno": {
+          "type": "integer"
+        },
+        "Settlement1": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "Settlement2": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "Settlement3": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "totSeet3": {
+          "type": "integer"
+        },
+        "totMist3": {
+          "type": "integer"
+        },
+        "totSeet1": {
+          "type": "integer"
+        },
+        "totSeet2": {
+          "type": "integer"
+        },
+        "totMist1": {
+          "type": "integer"
+        },
+        "totMist2": {
+          "type": "integer"
+        },
+        "OutCode": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "numberof Locations": {
+          "type": "integer"
+        },
+        "Unvaccinated this round": {
+          "type": "integer"
+        },
+        "0to9mth Seen": {
+          "type": "integer"
+        },
+        "0to9mth notMarked": {
+          "type": "integer"
+        },
+        "0to23mth Seen": {
+          "type": "integer"
+        },
+        "0to23mth notMarked": {
+          "type": "integer"
+        },
+        "24to59mth Seen": {
+          "type": "integer"
+        },
+        "24to59mth notMarked": {
+          "type": "integer"
+        },
+        "TOTAL Seen": {
+          "type": "integer"
+        },
+        "TOTAL Notmarked": {
+          "type": "integer"
+        },
+        "IsmainRnd": {
+          "type": "boolean"
+        },
+        "Settlement4": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "Settlement5": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "Settlement6": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "totSeet4": {
+          "type": "integer"
+        },
+        "totMist4": {
+          "type": "integer"
+        },
+        "totSeet5": {
+          "type": "integer"
+        },
+        "totSeet6": {
+          "type": "integer"
+        },
+        "totMist5": {
+          "type": "integer"
+        },
+        "totMist6": {
+          "type": "integer"
+        },
+         "source": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          }
+      }
+    }
+  }
+}

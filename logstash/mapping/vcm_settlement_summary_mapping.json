@@ -1,0 +1,124 @@
+{
+    "template": "vcm_settlement_summary",
+    "order": 1,
+    "settings": {
+        "number_of_shards": 5
+    },
+
+    "mappings": {
+        "doc": {
+            "properties": {
+                "@timestamp": {
+                    "type": "date"
+                },
+                "@version": {
+                    "type": "text",
+                    "fields": {
+                        "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        }
+                    }
+                },
+                "BCG": {
+                    "type": "long"
+                },
+                "Cumulative nos of children received Routine Immunization Card": {
+                    "type": "long"
+                },
+                "IPV": {
+                    "type": "long"
+                },
+                "LGA": {
+                    "type": "text",
+                    "fields": {
+                        "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        }
+                    }
+                },
+                "Measles": {
+                    "type": "long"
+                },
+                "Month": {
+                    "type": "date",
+                    "format": "yy-MMM || yyyy-MMM || dd-MMM-yy"
+                },
+                "Name of VWS": {
+                    "type": "text",
+                    "fields": {
+                        "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        }
+                    }
+                },
+                "Number of VCMs reported": {
+                    "type": "long"
+                },
+                "Number of new children registered in the reporting month": {
+                    "type": "long"
+                },
+                "OPV": {
+                    "type": "long"
+                },
+                "OPV 1": {
+                    "type": "long"
+                },
+                "OPV 2": {
+                    "type": "long"
+                },
+                "OPV 3": {
+                    "type": "long"
+                },
+                "Penta 1": {
+                    "type": "long"
+                },
+                "Penta 2": {
+                    "type": "long"
+                },
+                "Penta 3": {
+                    "type": "long"
+                },
+                "State": {
+                    "type": "text",
+                    "fields": {
+                        "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        }
+                    }
+                },
+                "Total number of VCMs under the VWS": {
+                    "type": "long"
+                },
+                "Total number of children registered till end of previous month": {
+                    "type": "long"
+                },
+                "VWS ID": {
+                    "type": "long"
+                },
+                "Ward": {
+                    "type": "text",
+                    "fields": {
+                        "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        }
+                    }
+                },
+                "uniquekey": {
+                    "type": "text",
+                    "fields": {
+                        "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

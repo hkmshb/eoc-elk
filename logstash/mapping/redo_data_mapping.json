@@ -1,0 +1,225 @@
+{"template": "redo_data",
+    "order": 1,
+    "settings": {
+      "number_of_shards": 5
+    },
+    "mappings": {
+      "doc": {
+        "properties": {
+          "@timestamp": {
+            "type": "date"
+          },
+          "@version": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "RevisitID": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "State": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          }, 
+          "Lga": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "Ward": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "DateImpR": {
+              "type": "date"
+          },
+          "TargetRedo": {
+              "type":"integer"
+          },
+          "SettlementsRedo":{
+            "type":"integer"
+        },
+        "NoHHRedo": {
+            "type":"integer"
+        },
+        "NoNCShools": {
+            "type":"integer"
+        },
+        "NoNOCOther": {
+            "type":"integer"
+        },
+        "MissedRedo": {
+            "type":"integer"
+        },
+        "ChildNCShool": {
+            "type":"integer"
+        },
+        "ChildNCOther": {
+            "type":"integer"
+        },
+        "ChildAbsent": {
+            "type":"integer"
+        },
+        "NonCompliance": {
+            "type":"integer"
+        },
+        "Reason1ABS": {
+            "type":"integer"
+        },
+        "Reason2ABS": {
+            "type":"integer"
+        },
+        "Reason3ABS": {
+            "type":"integer"
+        },
+        "Reason4ABS": {
+            "type":"integer"
+        },
+        "Reason5ABS": {
+            "type":"integer"
+        },
+        "Reason6ABS": {
+            "type":"integer"
+        },
+        "OpvSafety": {
+            "type":"integer"
+        },
+        "ChildSick": {
+            "type":"integer"
+        },
+        "ReligiousBelief": {
+            "type":"integer"
+        },
+        "NoNeedFelt": {
+            "type":"integer"
+        },
+        "PoliticalDifferences": {
+            "type":"integer"
+        },
+        "NoCaregiver": {
+            "type":"integer"
+        },
+        "UnhappyWith": {
+            "type":"integer"
+        },
+        "TooManyRounds": {
+            "type":"integer"
+        },
+        "ReasonNotGiven": {
+            "type":"integer"
+        },
+        "HHRevisited":{
+            "type":"integer"
+        },
+        "SCRevisited": {
+            "type":"integer"
+        },
+        "OTRevisited":{
+            "type":"integer"
+        },
+        "ImmRedo": {
+            "type":"integer"
+        },
+        "ImmRedoABSENT": {
+            "type":"integer"
+        },
+        "RELImmRedo": {
+            "type":"integer"
+        },
+        "RELImmRedoABSENT": {
+            "type":"integer"
+        },
+        "COMImmRedo": {
+            "type":"integer"
+        },
+        "COMImmRedoABSENT": {
+            "type":"integer"
+        },
+        "OTHERImRedo":{
+            "type":"integer"
+        },
+        "OTHERImRedoABSENT":{
+            "type":"integer"
+        }, "IMMSCTradNC": {
+            "type":"integer"
+        },
+        "IMMSCRelNC":{
+            "type":"integer"
+        },
+        "IMMSCCommNC": {
+            "type":"integer"
+        },
+        "IMMSCOtherNC":{
+            "type":"integer"
+        },
+        "IMMOTTradNC": {
+            "type":"integer"
+        },
+        "IMMOTRelNC":{
+            "type":"integer"
+        },
+        "IMMOTCommNC":{
+            "type":"integer"
+        },
+        "IMMOTOtherNC":{
+            "type":"integer"
+        },
+        "NotImmRedo":{
+            "type":"integer"
+        },
+        "NotImmRedoABSENT":{
+            "type":"integer"
+        },
+          "UniqueKey": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "REDO": {
+              "type":"boolean"
+          }, 
+          "IsmainRnd":{
+              "type":"boolean"
+          },
+            "source": {
+                "type": "text",
+                "fields": {
+                  "keyword": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  }
+                }
+              }
+          }
+        }
+        
+    }
+}

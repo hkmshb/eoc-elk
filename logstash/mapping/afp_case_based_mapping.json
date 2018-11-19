@@ -1,0 +1,599 @@
+{
+    "template": "afp_case_based",
+    "order": 1,
+    "settings": {
+        "number_of_shards": 5
+    },
+
+    "mappings": {
+        "doc": {
+            "properties": {
+                "@timestamp": {
+                    "type": "date"
+                },
+                "@version": {
+                    "type": "text",
+                    "fields": {
+                        "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        }
+                    }
+                },
+                "Address": {
+                    "type": "text",
+                    "fields": {
+                        "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        }
+                    }
+                },
+                "AddressInvestigator": {
+                    "type": "text",
+                    "fields": {
+                        "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        }
+                    }
+                },
+                "AdmittedTohospital": {
+                    "type": "long"
+                },
+                "AfterInvestigationTrueAFP": {
+                    "type": "long"
+                },
+                "AgeInMonths": {
+                    "type": "long"
+                },
+                "AgeInYears": {
+                    "type": "long"
+                },
+                "Amapcode": {
+                    "type": "text",
+                    "fields": {
+                        "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        }
+                    }
+                },
+                "Asymmetrical": {
+                    "type": "long"
+                },
+                "CaseContact": {
+                    "type": "long"
+                },
+                "Date1stStool": {
+                    "type": "text",
+                    "fields": {
+                        "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        }
+                    }
+                },
+                "Date2ndStool": {
+                    "type": "text",
+                    "fields": {
+                        "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        }
+                    }
+                },
+                "DateCaseinvestigated": {
+                    "type": "text",
+                    "fields": {
+                        "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        }
+                    }
+                },
+                "DateDoseatBirth": {
+                    "type": "text",
+                    "fields": {
+                        "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        }
+                    }
+                },
+                "DateFinalCellcultureResults": {
+                    "type": "text",
+                    "fields": {
+                        "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        }
+                    }
+                },
+                "DateFollowupExamine": {
+                    "type": "text",
+                    "fields": {
+                        "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        }
+                    }
+                },
+                "DateItdResultrecbydist": {
+                    "type": "text",
+                    "fields": {
+                        "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        }
+                    }
+                },
+                "DateItdResultsentbyreglab": {
+                    "type": "text",
+                    "fields": {
+                        "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        }
+                    }
+                },
+                "DateLabSentRestodistrict": {
+                    "type": "text",
+                    "fields": {
+                        "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        }
+                    }
+                },
+                "DateNatLabSentIsoReglab": {
+                    "type": "text",
+                    "fields": {
+                        "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        }
+                    }
+                },
+                "DateNotified": {
+                    "type": "date",
+                    "format": "dd-MMM-yyyy || dd-MMM-yy"
+                },
+                "DateOf1stDose": {
+                    "type": "text",
+                    "fields": {
+                        "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        }
+                    }
+                },
+                "DateOf2ndDose": {
+                    "type": "text",
+                    "fields": {
+                        "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        }
+                    }
+                },
+                "DateOf3rdDose": {
+                    "type": "text",
+                    "fields": {
+                        "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        }
+                    }
+                },
+                "DateOf4thDose": {
+                    "type": "text",
+                    "fields": {
+                        "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        }
+                    }
+                },
+                "DateOfAdmission": {
+                    "type": "text",
+                    "fields": {
+                        "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        }
+                    }
+                },
+                "DateOfBirth": {
+                    "type": "text",
+                    "fields": {
+                        "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        }
+                    }
+                },
+                "DateOfOnset": {
+                    "type": "text",
+                    "fields": {
+                        "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        }
+                    }
+                },
+                "DateReceived": {
+                    "type": "date",
+                    "format": "dd-MMM-yyyy || dd-MMM-yy"
+                },
+                "DateSpecRecbyNatLab": {
+                    "type": "date",
+                    "format": "dd-MMM-yyyy || dd-MMM-yy"
+                },
+                "DateSpecReceviedNatLevel": {
+                    "type": "date",
+                    "format": "dd-MMM-yyyy || dd-MMM-yy"
+                },
+                "DateSpeciSenttoNatLevel": {
+                    "type": "date",
+                    "format": "dd-MMM-yyyy || dd-MMM-yy"
+                },
+                "DateStoolSentolab": {
+                    "type": "date",
+                    "format": "dd-MMM-yyyy || dd-MMM-yy"
+                },
+                "DatelastIPVdoseRISIA": {
+                    "type": "date",
+                    "format": "dd-MMM-yyyy || dd-MMM-yy"
+                },
+                "District": {
+                    "type": "text",
+                    "fields": {
+                        "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        }
+                    }
+                },
+                "DurationinMonths": {
+                    "type": "text",
+                    "fields": {
+                        "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        }
+                    }
+                },
+                "EpidNumber": {
+                    "type": "text",
+                    "fields": {
+                        "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        }
+                    }
+                },
+                "Fathermother": {
+                    "type": "text",
+                    "fields": {
+                        "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        }
+                    }
+                },
+                "FeverAtOnset": {
+                    "type": "long"
+                },
+                "FinalCellCultureResult": {
+                    "type": "text",
+                    "fields": {
+                        "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        }
+                    }
+                },
+                "Finalclassification": {
+                    "type": "long"
+                },
+                "FindingsAtFollowup": {
+                    "type": "long"
+                },
+                "Flaccidsuddenparalysis": {
+                    "type": "long"
+                },
+                "HospitalRecordNo": {
+                    "type": "text",
+                    "fields": {
+                        "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        }
+                    }
+                },
+                "If4DateOflast": {
+                    "type": "text",
+                    "fields": {
+                        "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        }
+                    }
+                },
+                "ImmunocompromisedStatusSuspect": {
+                    "type": "text",
+                    "fields": {
+                        "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        }
+                    }
+                },
+                "LAFUP": {
+                    "type": "boolean"
+                },
+                "LLFUP": {
+                    "type": "boolean"
+                },
+                "La": {
+                    "type": "long"
+                },
+                "Latitude": {
+                    "type": "float"
+                },
+                "Ll": {
+                    "type": "long"
+                },
+                "Longitude": {
+                    "type": "float"
+                },
+                "Name": {
+                    "type": "text",
+                    "fields": {
+                        "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        }
+                    }
+                },
+                "NameofhospitalAddress": {
+                    "type": "text",
+                    "fields": {
+                        "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        }
+                    }
+                },
+                "NamesOfPatient": {
+                    "type": "text",
+                    "fields": {
+                        "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        }
+                    }
+                },
+                "NearestHealthfacility": {
+                    "type": "text",
+                    "fields": {
+                        "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        }
+                    }
+                },
+                "Nomadic": {
+                    "type": "text",
+                    "fields": {
+                        "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        }
+                    }
+                },
+                "NotifiedBy": {
+                    "type": "text",
+                    "fields": {
+                        "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        }
+                    }
+                },
+                "PlaceFirstVisited": {
+                    "type": "text",
+                    "fields": {
+                        "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        }
+                    }
+                },
+                "PlaceSecondVisited": {
+                    "type": "text",
+                    "fields": {
+                        "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        }
+                    }
+                },
+                "Progressionin3days": {
+                    "type": "long"
+                },
+                "Province": {
+                    "type": "text",
+                    "fields": {
+                        "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        }
+                    }
+                },
+                "RAFUP": {
+                    "type": "boolean"
+                },
+                "RLFUP": {
+                    "type": "boolean"
+                },
+                "RNEV": {
+                    "type": "long"
+                },
+                "Ra": {
+                    "type": "long"
+                },
+                "RecStatus": {
+                    "type": "long"
+                },
+                "Rl": {
+                    "type": "long"
+                },
+                "Rnpent": {
+                    "type": "long"
+                },
+                "Sex": {
+                    "type": "text",
+                    "fields": {
+                        "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        }
+                    }
+                },
+                "StoolCondition": {
+                    "type": "long"
+                },
+                "Tel": {
+                    "type": "text",
+                    "fields": {
+                        "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        }
+                    }
+                },
+                "Title": {
+                    "type": "text",
+                    "fields": {
+                        "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        }
+                    }
+                },
+                "TotalPoliodoses": {
+                    "type": "long"
+                },
+                "TotalbOPVmOPVdosesRI": {
+                    "type": "text",
+                    "fields": {
+                        "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        }
+                    }
+                },
+                "TotalbOPVmOPVdosesSIA": {
+                    "type": "text",
+                    "fields": {
+                        "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        }
+                    }
+                },
+                "Towncity": {
+                    "type": "text",
+                    "fields": {
+                        "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        }
+                    }
+                },
+                "UniqueKey": {
+                    "type": "long"
+                },
+                "Unit": {
+                    "type": "text",
+                    "fields": {
+                        "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        }
+                    }
+                },
+                "V1": {
+                    "type": "long"
+                },
+                "V2": {
+                    "type": "long"
+                },
+                "V3": {
+                    "type": "long"
+                },
+                "VDPV1": {
+                    "type": "text",
+                    "fields": {
+                        "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        }
+                    }
+                },
+                "VDPV2": {
+                    "type": "text",
+                    "fields": {
+                        "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        }
+                    }
+                },
+                "VDPV3": {
+                    "type": "text",
+                    "fields": {
+                        "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        }
+                    }
+                },
+                "Villageneighbourhood": {
+                    "type": "text",
+                    "fields": {
+                        "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        }
+                    }
+                },
+                "W1": {
+                    "type": "long"
+                },
+                "W2": {
+                    "type": "long"
+                },
+                "W3": {
+                    "type": "long"
+                },
+                "Ward": {
+                    "type": "text",
+                    "fields": {
+                        "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        }
+                    }
+                },
+                "WeekOnset": {
+                    "type": "long"
+                }
+            }
+        }
+    }
+
+
+}
