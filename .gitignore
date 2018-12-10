@@ -1,1 +1,3 @@
 logstash-data
+[._]logs
+[._]elk

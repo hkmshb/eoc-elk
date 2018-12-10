@@ -1,225 +1,226 @@
-{"template": "redo_data",
-    "order": 1,
-    "settings": {
-      "number_of_shards": 5
-    },
-    "mappings": {
-      "doc": {
-        "properties": {
-          "@timestamp": {
-            "type": "date"
-          },
-          "@version": {
-            "type": "text",
-            "fields": {
-              "keyword": {
-                "type": "keyword",
-                "ignore_above": 256
-              }
+{
+  "template": "redo_data",
+  "order": 1,
+  "settings": {
+    "number_of_shards": 5
+  },
+  "mappings": {
+    "doc": {
+      "properties": {
+        "@timestamp": {
+          "type": "date"
+        },
+        "@version": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
             }
-          },
-          "RevisitID": {
-            "type": "text",
-            "fields": {
-              "keyword": {
-                "type": "keyword",
-                "ignore_above": 256
-              }
+          }
+        },
+        "RevisitID": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
             }
-          },
-          "State": {
-            "type": "text",
-            "fields": {
-              "keyword": {
-                "type": "keyword",
-                "ignore_above": 256
-              }
+          }
+        },
+        "State": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
             }
-          }, 
-          "Lga": {
-            "type": "text",
-            "fields": {
-              "keyword": {
-                "type": "keyword",
-                "ignore_above": 256
-              }
+          }
+        },
+        "Lga": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
             }
-          },
-          "Ward": {
-            "type": "text",
-            "fields": {
-              "keyword": {
-                "type": "keyword",
-                "ignore_above": 256
-              }
+          }
+        },
+        "Ward": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
             }
-          },
-          "DateImpR": {
-              "type": "date"
-          },
-          "TargetRedo": {
-              "type":"integer"
-          },
-          "SettlementsRedo":{
-            "type":"integer"
+          }
+        },
+        "DateImpR": {
+          "type": "date"
+        },
+        "TargetRedo": {
+          "type": "integer"
+        },
+        "SettlementsRedo": {
+          "type": "integer"
         },
         "NoHHRedo": {
-            "type":"integer"
+          "type": "integer"
         },
         "NoNCShools": {
-            "type":"integer"
+          "type": "integer"
         },
         "NoNOCOther": {
-            "type":"integer"
+          "type": "integer"
         },
         "MissedRedo": {
-            "type":"integer"
+          "type": "integer"
         },
         "ChildNCShool": {
-            "type":"integer"
+          "type": "integer"
         },
         "ChildNCOther": {
-            "type":"integer"
+          "type": "integer"
         },
         "ChildAbsent": {
-            "type":"integer"
+          "type": "integer"
         },
         "NonCompliance": {
-            "type":"integer"
+          "type": "integer"
         },
         "Reason1ABS": {
-            "type":"integer"
+          "type": "integer"
         },
         "Reason2ABS": {
-            "type":"integer"
+          "type": "integer"
         },
         "Reason3ABS": {
-            "type":"integer"
+          "type": "integer"
         },
         "Reason4ABS": {
-            "type":"integer"
+          "type": "integer"
         },
         "Reason5ABS": {
-            "type":"integer"
+          "type": "integer"
         },
         "Reason6ABS": {
-            "type":"integer"
+          "type": "integer"
         },
         "OpvSafety": {
-            "type":"integer"
+          "type": "integer"
         },
         "ChildSick": {
-            "type":"integer"
+          "type": "integer"
         },
         "ReligiousBelief": {
-            "type":"integer"
+          "type": "integer"
         },
         "NoNeedFelt": {
-            "type":"integer"
+          "type": "integer"
         },
         "PoliticalDifferences": {
-            "type":"integer"
+          "type": "integer"
         },
         "NoCaregiver": {
-            "type":"integer"
+          "type": "integer"
         },
         "UnhappyWith": {
-            "type":"integer"
+          "type": "integer"
         },
         "TooManyRounds": {
-            "type":"integer"
+          "type": "integer"
         },
         "ReasonNotGiven": {
-            "type":"integer"
+          "type": "integer"
         },
-        "HHRevisited":{
-            "type":"integer"
+        "HHRevisited": {
+          "type": "integer"
         },
         "SCRevisited": {
-            "type":"integer"
+          "type": "integer"
         },
-        "OTRevisited":{
-            "type":"integer"
+        "OTRevisited": {
+          "type": "integer"
         },
         "ImmRedo": {
-            "type":"integer"
+          "type": "integer"
         },
         "ImmRedoABSENT": {
-            "type":"integer"
+          "type": "integer"
         },
         "RELImmRedo": {
-            "type":"integer"
+          "type": "integer"
         },
         "RELImmRedoABSENT": {
-            "type":"integer"
+          "type": "integer"
         },
         "COMImmRedo": {
-            "type":"integer"
+          "type": "integer"
         },
         "COMImmRedoABSENT": {
-            "type":"integer"
+          "type": "integer"
         },
-        "OTHERImRedo":{
-            "type":"integer"
+        "OTHERImRedo": {
+          "type": "integer"
         },
-        "OTHERImRedoABSENT":{
-            "type":"integer"
-        }, "IMMSCTradNC": {
-            "type":"integer"
+        "OTHERImRedoABSENT": {
+          "type": "integer"
         },
-        "IMMSCRelNC":{
-            "type":"integer"
+        "IMMSCTradNC": {
+          "type": "integer"
+        },
+        "IMMSCRelNC": {
+          "type": "integer"
         },
         "IMMSCCommNC": {
-            "type":"integer"
+          "type": "integer"
         },
-        "IMMSCOtherNC":{
-            "type":"integer"
+        "IMMSCOtherNC": {
+          "type": "integer"
         },
         "IMMOTTradNC": {
-            "type":"integer"
+          "type": "integer"
         },
-        "IMMOTRelNC":{
-            "type":"integer"
+        "IMMOTRelNC": {
+          "type": "integer"
         },
-        "IMMOTCommNC":{
-            "type":"integer"
+        "IMMOTCommNC": {
+          "type": "integer"
         },
-        "IMMOTOtherNC":{
-            "type":"integer"
+        "IMMOTOtherNC": {
+          "type": "integer"
         },
-        "NotImmRedo":{
-            "type":"integer"
+        "NotImmRedo": {
+          "type": "integer"
         },
-        "NotImmRedoABSENT":{
-            "type":"integer"
+        "NotImmRedoABSENT": {
+          "type": "integer"
         },
-          "UniqueKey": {
-            "type": "text",
-            "fields": {
-              "keyword": {
-                "type": "keyword",
-                "ignore_above": 256
-              }
+        "UniqueKey": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
             }
-          },
-          "REDO": {
-              "type":"boolean"
-          }, 
-          "IsmainRnd":{
-              "type":"boolean"
-          },
-            "source": {
-                "type": "text",
-                "fields": {
-                  "keyword": {
-                    "type": "keyword",
-                    "ignore_above": 256
-                  }
-                }
-              }
+          }
+        },
+        "REDO": {
+          "type": "boolean"
+        },
+        "IsmainRnd": {
+          "type": "boolean"
+        },
+        "source": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
           }
         }
-        
+      }
     }
+  }
 }

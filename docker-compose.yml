@@ -49,11 +49,12 @@ services:
       - "5001:5000"
     environment:
       LS_JAVA_OPTS: "-Xmx512m -Xms512m"
-      JDBC_STRING: jdbc:postgresql://host.docker.internal/eha
+      JDBC_STRING: jdbc:postgresql://host.docker.internal
       PSQL_USER: hkmshb
       PSQL_PASSWORD: 0p3n
-      POSTGRES_USER: 'hkmshb'
-      POSTGRES_PASSWORD: '0p3n'
+      PSQL_DB: eoc_data_test
+      POSTGRES_USER: hkmshb
+      POSTGRES_PASSWORD: 0p3n
       CKAN_DB_HOST: host.docker.internal
       ES_HOST: elasticsearch:9200
     command: start-prod
