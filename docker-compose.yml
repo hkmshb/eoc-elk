@@ -49,9 +49,10 @@ services:
       - "5001:5000"
     environment:
       LS_JAVA_OPTS: "-Xmx512m -Xms512m"
-      JDBC_STRING: jdbc:postgresql://host.docker.internal/eoc_data
+      JDBC_STRING: jdbc:postgresql://host.docker.internal
       PSQL_USER: ${PSQL_USR}
       PSQL_PASSWORD: ${PSQL_PWD}
+      PSQL_DB: eoc_data
       POSTGRES_USER: ${PSQL_USR}
       POSTGRES_PASSWORD: ${PSQL_PWD}
       CKAN_DB_HOST: host.docker.internal

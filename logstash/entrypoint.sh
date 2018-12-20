@@ -26,7 +26,7 @@ setup_database_tables_dev(){
     # run the sql files in the sql directory
     # assumes path => /usr/share/logstash/sql and psql installed
     FILES_PATH=/usr/share/logstash/sql
-    cat $FILES_PATH/*.sql | psql -d eoc_data
+    cat $FILES_PATH/*.sql | psql -d ${PSQL_DB}
 }
 
 setup_database_tables_prod(){

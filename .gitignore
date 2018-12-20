@@ -1,4 +1,6 @@
-logstash-data/
+logstash-data
+[._]logs
+[._]elk
 
 .env
 kibana/config/kibana.yml
