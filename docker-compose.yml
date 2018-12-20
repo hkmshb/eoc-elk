@@ -10,7 +10,7 @@ services:
       - "9200:9200"
       - "9300:9300"
     environment:
-      ES_JAVA_OPTS: "-Xmx256m -Xms256m"
+      ES_JAVA_OPTS: "-Xmx512m -Xms512m"
     networks:
       local:
         aliases:
@@ -49,13 +49,13 @@ services:
       - "5001:5000"
     environment:
       LS_JAVA_OPTS: "-Xmx512m -Xms512m"
-      JDBC_STRING: jdbc:postgresql://host.docker.internal/eha
-      PSQL_USER: hkmshb
-      PSQL_PASSWORD: 0p3n
-      POSTGRES_USER: 'hkmshb'
-      POSTGRES_PASSWORD: '0p3n'
+      JDBC_STRING: jdbc:postgresql://host.docker.internal/eoc_data
+      PSQL_USER: ${PSQL_USR}
+      PSQL_PASSWORD: ${PSQL_PWD}
+      POSTGRES_USER: ${PSQL_USR}
+      POSTGRES_PASSWORD: ${PSQL_PWD}
       CKAN_DB_HOST: host.docker.internal
-      ES_HOST: elasticsearch:9200
+      ES_HOST: ${ES_HOST}
     command: start-prod
     networks:
       local:
