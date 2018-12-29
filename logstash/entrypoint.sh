@@ -39,7 +39,8 @@ setup_database_tables_prod(){
     # run the sql files in the sql directory
     # assumes path => /usr/share/logstassh/sql and psql installed
     FILES_PATH=/usr/share/logstash/sql
-    cat $FILES_PATH/*.sql | psql -d eoc_data
+    cat $FILES_PATH/table_*.sql | psql -d eoc_data
+    cat $FILES_PATH/view_*.sql | psql -d eoc_data
 }
 
 case "$1" in
