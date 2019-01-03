@@ -3,4 +3,3 @@ logstash-data
 [._]elk
 
 .env
-kibana/config/kibana.yml
