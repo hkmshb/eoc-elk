@@ -9,12 +9,18 @@ WITH calc AS (
     "DateCaseinvestigated" as date_case_investigated,
     "FinalCellCultureResult" as final_cell_culture_result,
     "StoolCondition" as stool_condition,
+    "DateStoolSentolab" as date_stool_sent_to_lab,
+    "DateLabSentRestodistrict" as date_lab_sent_rest_to_district,
+    "DateSpecRecbyNatLab" as date_spec_rec_by_natlab,
     (
-      (("DateCaseinvestigated"::date) - ("DateNotified"::date)) * 24
+      ("DateCaseinvestigated"::date - "DateNotified"::date) * 24
     ) as hrs_of_notification,
     (
-      (("DateStoolSentolab"::date) - ("DateLabSentRestodistrict"::date)) + 1
-    ) as lab_result_feedback
+      ("DateStoolSentolab"::date - "DateLabSentRestodistrict"::date) + 1
+    ) as lab_result_feedback,
+    (
+      (("DateStoolSentolab"::date - "DateSpecRecbyNatLab"::date) + 1) * 24
+    ) as specimen_arrival
   FROM afp_case_based
   WHERE "DateReceived" != 'DateReceived'
 ) 
@@ -25,8 +31,12 @@ SELECT
   date_case_investigated::date,
   final_cell_culture_result,
   stool_condition,
+  date_stool_sent_to_lab::date,
+  date_lab_sent_rest_to_district::date,
+  date_spec_rec_by_natlab::date,
   hrs_of_notification,
   lab_result_feedback,
+  specimen_arrival,
   (
     CASE
       WHEN hrs_of_notification < 48 THEN 'Within 48 hours'
@@ -44,5 +54,11 @@ SELECT
       WHEN '1' THEN 'Speciment in good condition'
       ELSE 'Speciment not in good condition'
     END
-  ) as specimen_condition
+  ) as specimen_condition,
+  (
+    CASE 
+      WHEN specimen_arrival <= 72 THEN 'Specimen arrived with 72 hours'
+      ELSE 'Speciment arrived later than 72 hours'
+    END
+  ) as specimen_arrival_timeliness
   FROM calc;
