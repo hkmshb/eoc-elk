@@ -1,6 +1,6 @@
-DROP VIEW IF EXISTS afp_case_based_calcs;
+DROP VIEW IF EXISTS afp_case_based_calc;
 
-CREATE OR REPLACE VIEW afp_case_based_calcs AS
+CREATE OR REPLACE VIEW afp_case_based_calc AS
 WITH calc AS (
   SELECT 
     "EpidNumber" as epid_number,

@@ -1,5 +1,5 @@
 {
-  "template": "afp_case_based_calcs",
+  "template": "afp_case_based_calc",
   "order": 1,
   "settings": {
     "number_of_shards": 5
