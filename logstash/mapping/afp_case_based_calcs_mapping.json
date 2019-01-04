@@ -58,6 +58,9 @@
         "hrs_of_notification": {
           "type": "integer"
         },
+        "lab_result_feedback": {
+          "type": "integer"
+        },
         "investigated_by_dsno": {
           "type": "text",
           "fields": {

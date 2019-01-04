@@ -26,6 +26,7 @@ SELECT
   final_cell_culture_result,
   stool_condition,
   hrs_of_notification,
+  lab_result_feedback,
   (
     CASE
       WHEN hrs_of_notification < 48 THEN 'Within 48 hours'
