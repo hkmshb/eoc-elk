@@ -1,5 +1,7 @@
 logstash-data
+es-data
+
 [._]logs
 [._]elk
-
+[._]tmp
 .env
