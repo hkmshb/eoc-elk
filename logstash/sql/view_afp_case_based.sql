@@ -12,6 +12,8 @@ WITH calc AS (
     "DateStoolSentolab" as date_stool_sent_to_lab,
     "DateLabSentRestodistrict" as date_lab_sent_rest_to_district,
     "DateSpecRecbyNatLab" as date_spec_rec_by_natlab,
+    "DateOfOnset" as date_of_onset,
+    "DateFollowupExamine" as date_followup_examine,
     (
       ("DateCaseinvestigated"::date - "DateNotified"::date) * 24
     ) as hrs_of_notification,
@@ -34,6 +36,8 @@ SELECT
   date_stool_sent_to_lab::date,
   date_lab_sent_rest_to_district::date,
   date_spec_rec_by_natlab::date,
+  date_of_onset::date,
+  date_followup_examine::date,
   hrs_of_notification,
   lab_result_feedback,
   specimen_arrival,
@@ -60,5 +64,8 @@ SELECT
       WHEN specimen_arrival <= 72 THEN 'Specimen arrived with 72 hours'
       ELSE 'Speciment arrived later than 72 hours'
     END
-  ) as specimen_arrival_timeliness
+  ) as specimen_arrival_timeliness,
+  (
+    (date_followup_examine::date - date_of_onset::date) + 1
+  ) as days_of_followup
   FROM calc;

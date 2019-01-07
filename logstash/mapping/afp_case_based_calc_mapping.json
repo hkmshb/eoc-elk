@@ -55,10 +55,28 @@
         "stool_condition": {
           "type": "long"
         },
+        "date_stool_sent_to_lab": {
+          "type": "date"
+        },
+        "date_lab_sent_rest_to_district": {
+          "type": "date"
+        },
+        "date_spec_rec_by_natlab": {
+          "type": "date"
+        },
+        "date_of_onset": {
+          "type": "date"
+        },
+        "date_followup_examine": {
+          "type": "date"
+        },
         "hrs_of_notification": {
           "type": "integer"
         },
         "lab_result_feedback": {
+          "type": "integer"
+        },
+        "specimen_arrival": {
           "type": "integer"
         },
         "investigated_by_dsno": {
@@ -87,6 +105,18 @@
               "ignore_above": 256
             }
           }
+        },
+        "specimen_arrival_timeliness": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "days_of_followup": {
+          "type": "integer"
         }
       }
     }
