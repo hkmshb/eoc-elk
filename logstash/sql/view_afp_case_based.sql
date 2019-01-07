@@ -18,10 +18,10 @@ WITH calc AS (
       ("DateCaseinvestigated"::date - "DateNotified"::date) * 24
     ) as hrs_of_notification,
     (
-      ("DateStoolSentolab"::date - "DateLabSentRestodistrict"::date) + 1
+      ("DateLabSentRestodistrict"::date - "DateStoolSentolab"::date) + 1
     ) as lab_result_feedback,
     (
-      (("DateStoolSentolab"::date - "DateSpecRecbyNatLab"::date) + 1) * 24
+      (("DateSpecRecbyNatLab"::date - "DateStoolSentolab"::date) + 1) * 24
     ) as specimen_arrival
   FROM afp_case_based
   WHERE "DateReceived" != 'DateReceived'
